@@ -121,18 +121,18 @@ if __name__ == "__main__":
 
     # print("******** Step 2 : Generate corpus to be learned *******")
 
-    meta_path = ['i', 'v', 'a', 'v']
+    meta_path = ['i', 'v', 'a', 'v','i']
     client = MetaWalkClient(meta_path)
 
-    user_geo_edges = '/Users/zhangjiwen/Desktop/twitter/data/modified/group1_user2UScity.csv'
-    user_edges = '/Users/zhangjiwen/Desktop/twitter/data/modified/has_US_tweeted_userFriends.csv'
-    city_state = '/Users/zhangjiwen/Desktop/twitter/data/modified/group1_city2state2country.csv'
+    user_geo_edges = 'twitter/data/modified/group1_user2UScity.csv'
+    user_edges = 'twitter/data/modified/has_US_tweeted_userFriends.csv'
+    city_state = 'twitter/data/modified/group1_city2state2country.csv'
 
     client.load_graph_fromcsv(user_geo_edges, isedge=True)
     client.load_graph_fromcsv(user_edges, isedge=True)
     client.load_graph_fromcsv(city_state, isedge=True)
 
-    out_path = '/Users/zhangjiwen/Desktop/twitter/data/modified/group1_corpus_ivav.txt'
+    out_path = 'twitter/data/modified/group1_corpus_ivav.txt'
     client.generate_corpus(out_path, 13, 30)
 
 

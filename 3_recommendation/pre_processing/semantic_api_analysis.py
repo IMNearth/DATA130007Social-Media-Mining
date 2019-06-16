@@ -84,7 +84,7 @@ if __name__ == "__main__":
     sentiment_api_url = text_analytics_base_url + "sentiment"
     #print(sentiment_api_url)
 
-    csv_file_path = '/Users/zhangjiwen/Desktop/twitter/data/raw/group1_fulltweets.csv'
+    csv_file_path = 'twitter/data/raw/group1_fulltweets.csv'
     document_list, dt, ceiling = get_documents(csv_file_path)
     print("document:", len(document_list))
 
@@ -116,5 +116,5 @@ if __name__ == "__main__":
 
     print("sentiment", len(sentiment_list))
 
-    out_csv_path = '/Users/zhangjiwen/Desktop/twitter/data/test_sentiment.csv'
+    out_csv_path = 'twitter/data/test_sentiment.csv'
     save_sentiments_2_csv(out_csv_path, sentiment_list, document_list, dt, ceiling)
