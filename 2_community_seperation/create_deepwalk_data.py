@@ -82,11 +82,11 @@ def create_edges(open_path, save_path):
 
 if __name__ == "__main__":
 
-    open_path = '/Users/zhangjiwen/Desktop/twitter/data/unique_sorted_counted_userid.csv'
-    save_path = '/Users/zhangjiwen/Desktop/twitter/data/graph_data/nodes.csv'
+    open_path = 'data/unique_sorted_counted_userid.csv'
+    save_path = 'data/graph_data/nodes.csv'
     #create_nodes(open_path, save_path)
 
 
-    open_path = '/Users/zhangjiwen/Desktop/twitter/data/userscl_new2_final.csv'
-    save_path = '/Users/zhangjiwen/Desktop/twitter/data/graph_data/edges_2.csv'
+    open_path = 'data/userscl_new2_final.csv'
+    save_path = 'data/graph_data/edges_2.csv'
     create_edges(open_path, save_path)

@@ -215,11 +215,11 @@ def draw_graph(G, pos):
 # In[8]:
 if __name__ == "__main__":
 
-    path = '/Users/zhangjiwen/Desktop/twitter/data/graph_data/edges2.csv'
+    path = 'data/graph_data/edges2.csv'
     g = build_graph_fromcsv(path, isedge=True)
 
     has_emb = 0  # Already Has Embedding or NOT (0/1)
-    emb_file = '/Users/zhangjiwen/Desktop/twitter/data/word2vec-d128-w5-hs1.txt'  # file_path
+    emb_file = 'data/word2vec-d128-w5-hs1.txt'  # file_path
 
     if not has_emb:
         word_vec = initialize_feature(g)

@@ -16,8 +16,7 @@ from time import strftime, localtime
 def test():
     nodes = []
     cat = set()
-    # df = pd.read_csv('/Users/zhangjiwen/Desktop/twitter/data/modified/group1_fuoutcome.csv')
-    df = pd.read_csv('/Users/zhangjiwen/Desktop/twitter/data/modified/3_group1_fuoutcome_user2city.csv')
+    df = pd.read_csv('data/modified/3_group1_fuoutcome_user2city.csv')
     counts = Counter(list(df['community']))
     scarce_cat = [ c for c,__ in counts.items() if __<=10]
     for i in df.index:
@@ -61,7 +60,7 @@ def test():
     edges = []
 
     '''
-    df = pd.read_csv('/Users/zhangjiwen/Desktop/twitter/data/modified/1_has_US_tweeted_userFriends.csv')
+    df = pd.read_csv('data/modified/1_has_US_tweeted_userFriends.csv')
     for i in df.index:
         edges.append({
             "source": df['from'][i][1:],
@@ -69,7 +68,7 @@ def test():
         })
     '''
 
-    df = pd.read_csv('/Users/zhangjiwen/Desktop/twitter/data/modified/1_group1_user2UScity.csv')
+    df = pd.read_csv('data/modified/1_group1_user2UScity.csv')
     for i in df.index:
         edges.append({
             "source": df['from'][i][1:],
@@ -92,7 +91,7 @@ def Force(nodes, edges, category):
             title_opts=opts.TitleOpts(title="Graph_"+strftime("%m-%d", localtime())))
     )
     time_str = strftime("%m-%d", localtime())
-    graph.render("/Users/zhangjiwen/Desktop/Graph"+ time_str +".html") #
+    graph.render("Desktop/Graph"+ time_str +".html") #
 
 
 if __name__ == '__main__':

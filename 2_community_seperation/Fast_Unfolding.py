@@ -212,7 +212,7 @@ if __name__ == "__main__":
     # note that we only use the user-UScity information and user-friends information
     edges = []
 
-    dt = pd.read_csv("/Users/zhangjiwen/Desktop/twitter/data/modified/1_group1_user2UScity.csv")
+    dt = pd.read_csv("data/modified/1_group1_user2UScity.csv")
     for i in dt.index:
         edges.append(
             (dt['from'][i],dt['to'][i] )
@@ -226,7 +226,7 @@ if __name__ == "__main__":
         )
     '''
 
-    dt = pd.read_csv('/Users/zhangjiwen/Desktop/twitter/data/modified/1_group1_city2state2country.csv')
+    dt = pd.read_csv('data/modified/1_group1_city2state2country.csv')
     for i in dt.index:
         if str(dt['from'][i]) != 'US' and str(dt['to'][i]) != 'US':
             edges.append(
@@ -235,7 +235,7 @@ if __name__ == "__main__":
 
     print(len(edges))
     print("build weight...")
-    path = '/Users/zhangjiwen/Desktop/twitter/data/modified/2_group1_corpus_ivav_learned_0520.txt'
+    path = 'data/modified/2_group1_corpus_ivav_learned_0520.txt'
     dt = np.loadtxt(path, dtype=str, skiprows=2)
     userAndgeo = list(dt[:, 0])
     dt = np.delete(dt, 0, axis=1)
@@ -294,7 +294,7 @@ if __name__ == "__main__":
     print("classes : ", len(classes))
 
     c = 0
-    with open("/Users/zhangjiwen/Desktop/twitter/data/modified/group1_fuoutcome_user2city.csv",  "wb+") as file:
+    with open("data/modified/group1_fuoutcome_user2city.csv",  "wb+") as file:
         f = csv.writer(file)
         f.writerow(['user', 'community', 'degree'])
         for community, iTems in p.items():

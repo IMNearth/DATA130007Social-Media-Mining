@@ -112,7 +112,7 @@ def cmp_central(k, cent, centrality):
 def main():
     g = nx.Graph()
 
-    dt = pd.read_csv("/Users/zhangjiwen/Desktop/twitter/data/modified/1_has_US_tweeted_userFriends.csv",
+    dt = pd.read_csv("data/modified/1_has_US_tweeted_userFriends.csv",
                      encoding='utf-8')
     edges = []
     for i in dt.index:
@@ -149,7 +149,7 @@ if __name__ == "__main__":
 
     save = 1
     if save:
-        path = '/Users/zhangjiwen/Desktop/twitter/data/modified/Centrality.csv'
+        path = 'data/modified/Centrality.csv'
         f = csv.writer(open(path, "wb+"))
         f.writerow(['order', 'user', 'degree_centrality','user', 'betweenness_centrality', 'user', 'eigenvector_centrality'])
 
