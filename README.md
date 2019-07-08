@@ -5,5 +5,7 @@ Predicting interactions between objects in a heterogeneous information network i
 
 # Roles and Responsibilities of the Team
 Ran Liu: Data cleansing and analysis & Trajectory
+
 Jiwen Zhang: Location-based community detection & Recommendation system 
+
 Yin Wan: Data scraping & Trajectory
